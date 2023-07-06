@@ -72,23 +72,55 @@
 		9BC44A2A2A55F740001C990B /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				9BC44A492A56EF28001C990B /* String+Ext.swift */,
-				9BC44A2B2A55F740001C990B /* AppDelegate.swift */,
-				9BC44A2D2A55F740001C990B /* SceneDelegate.swift */,
-				9BC44A342A55F741001C990B /* Assets.xcassets */,
-				9BC44A362A55F741001C990B /* LaunchScreen.storyboard */,
+				9BC44A532A56FBB0001C990B /* Controllers */,
+				9BC44A542A56FBE9001C990B /* Custom Views */,
+				9BC44A562A56FC79001C990B /* Resources */,
+				9BC44A552A56FC1A001C990B /* Extensions */,
 				9BC44A392A55F741001C990B /* Info.plist */,
+			);
+			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		9BC44A532A56FBB0001C990B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				9BC44A3F2A55FD5C001C990B /* SearchVC.swift */,
 				9BC44A412A55FD86001C990B /* FavouriteListVC.swift */,
+				9BC44A472A56EB78001C990B /* FollowerListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9BC44A542A56FBE9001C990B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
 				9BC44A432A56BE47001C990B /* GFButton.swift */,
 				9BC44A452A56C226001C990B /* GFTextField.swift */,
-				9BC44A472A56EB78001C990B /* FollowerListVC.swift */,
 				9BC44A4B2A56EFFC001C990B /* GFTitleLabel.swift */,
 				9BC44A4D2A56F147001C990B /* GFBodyLabel.swift */,
 				9BC44A4F2A56F1FE001C990B /* GFAlertVC.swift */,
-				9BC44A512A56F77E001C990B /* UIViewController+Ext.swift */,
 			);
-			path = GHFollowers;
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		9BC44A552A56FC1A001C990B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BC44A512A56F77E001C990B /* UIViewController+Ext.swift */,
+				9BC44A492A56EF28001C990B /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BC44A562A56FC79001C990B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9BC44A2D2A55F740001C990B /* SceneDelegate.swift */,
+				9BC44A2B2A55F740001C990B /* AppDelegate.swift */,
+				9BC44A342A55F741001C990B /* Assets.xcassets */,
+				9BC44A362A55F741001C990B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
