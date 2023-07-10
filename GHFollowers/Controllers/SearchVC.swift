@@ -9,11 +9,16 @@ import UIKit
 
 class SearchVC: UIViewController {
     
+    // MARK: -- Properties
+    
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColour: .systemGreen, title: "Get Followers")
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
+    
+    
+    // MARK: -- View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +31,9 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
     
     // MARK: -- Private Functions
     
@@ -47,6 +53,7 @@ class SearchVC: UIViewController {
         followerListVC.title = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
     }
+    
     
     // MARK: -- Set up View
     
