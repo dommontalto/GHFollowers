@@ -37,5 +37,7 @@ class GFTextField: UITextField {
         returnKeyType = .go
         placeholder = "Enter a username"
         autocapitalizationType = .none
+        
+        text = "sallen0400"
     }
 }

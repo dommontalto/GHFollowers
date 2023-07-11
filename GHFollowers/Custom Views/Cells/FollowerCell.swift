@@ -13,7 +13,6 @@ class FollowerCell: UICollectionViewCell {
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAlignment: .center, fontSize: 16)
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
