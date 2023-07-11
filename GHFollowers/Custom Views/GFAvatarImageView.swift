@@ -9,6 +9,7 @@ import UIKit
 
 class GFAvatarImageView: UIImageView {
     
+    let cache = NetworkManager.shared.cache
     let placeholderImage = UIImage(named: "avatar-placeholder")!
     
     
@@ -27,4 +28,12 @@ class GFAvatarImageView: UIImageView {
         image = placeholderImage
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func setImage(from urlString: String) {
+            NetworkManager.shared.downloadImage(from: urlString) { [weak self] image in
+                   guard let self = self else { return }
+                   self.image = image
+            }
+    }
+
 }
