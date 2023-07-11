@@ -17,7 +17,6 @@ class SearchVC: UIViewController {
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
     
-    
     // MARK: -- View Life Cycle
     
     override func viewDidLoad() {
@@ -33,7 +32,6 @@ class SearchVC: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
     
     // MARK: -- Private Functions
     
@@ -53,7 +51,6 @@ class SearchVC: UIViewController {
         followerListVC.title = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
     }
-    
     
     // MARK: -- Set up View
     
