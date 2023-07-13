@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B865DCA2A601B3700977779 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B865DC92A601B3700977779 /* UserInfoVC.swift */; };
 		9BB4FFAB2A5C76D6001ABBFD /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4FFAA2A5C76D6001ABBFD /* Follower.swift */; };
 		9BB4FFAD2A5C7796001ABBFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4FFAC2A5C7796001ABBFD /* User.swift */; };
 		9BB4FFB02A5C7BB0001ABBFD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4FFAF2A5C7BB0001ABBFD /* NetworkManager.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B865DC92A601B3700977779 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		9BB4FFAA2A5C76D6001ABBFD /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9BB4FFAC2A5C7796001ABBFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9BB4FFAF2A5C7BB0001ABBFD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				9BC44A3F2A55FD5C001C990B /* SearchVC.swift */,
 				9BC44A412A55FD86001C990B /* FavouriteListVC.swift */,
 				9BC44A472A56EB78001C990B /* FollowerListVC.swift */,
+				9B865DC92A601B3700977779 /* UserInfoVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC44A462A56C226001C990B /* GFTextField.swift in Sources */,
+				9B865DCA2A601B3700977779 /* UserInfoVC.swift in Sources */,
 				9BC44A402A55FD5C001C990B /* SearchVC.swift in Sources */,
 				9BC44A522A56F77E001C990B /* UIViewController+Ext.swift in Sources */,
 				9BC44A442A56BE47001C990B /* GFButton.swift in Sources */,
