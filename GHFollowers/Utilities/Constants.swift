@@ -8,14 +8,16 @@
 import UIKit
 
 enum SFSymbols {
-    static let location = "mappin.and.ellipse"
-    static let repos = "folder"
-    static let gists = "text.alignleft"
-    static let followers = "heart"
-    static let following = "person.2"
+    static let location = UIImage(systemName: "mappin.and.ellipse")
+    static let repos = UIImage(systemName: "folder")
+    static let gists = UIImage(systemName: "text.alignleft")
+    static let followers = UIImage(systemName: "heart")
+    static let following = UIImage(systemName: "person.2")
 }
 
 enum Images {
+    static let placeholder = UIImage(named: "avatar-placeholder")
+    static let emptyStateLogo = UIImage(named: "empty-state-logo")
     static let ghLogo = UIImage(named: "gh-logo")
 }
 
@@ -39,9 +41,19 @@ enum DeviceTypes {
     static let isiPhone8PlusZoomed      = idiom == .phone && ScreenSize.maxLength == 736.0 && nativeScale < scale
     static let isiPhoneX                = idiom == .phone && ScreenSize.maxLength == 812.0
     static let isiPhoneXsMaxAndXr       = idiom == .phone && ScreenSize.maxLength == 896.0
+    static let isiPhone12Mini           = idiom == .phone && ScreenSize.maxLength == 780.0
+    static let isiPhone12And12Pro       = idiom == .phone && ScreenSize.maxLength == 844.0
+    static let isiPhone12ProMax         = idiom == .phone && ScreenSize.maxLength == 926.0
+    static let isiPhone13Mini           = idiom == .phone && ScreenSize.maxLength == 780.0
+    static let isiPhone13And13Pro       = idiom == .phone && ScreenSize.maxLength == 844.0
+    static let isiPhone13ProMax         = idiom == .phone && ScreenSize.maxLength == 926.0
+    static let isiPhone14               = idiom == .phone && ScreenSize.maxLength == 844.0
+    static let isiPhone14Plus           = idiom == .phone && ScreenSize.maxLength == 926.0
+    static let isiPhone14Pro            = idiom == .phone && ScreenSize.maxLength == 844.0
+    static let isiPhone14ProMax         = idiom == .phone && ScreenSize.maxLength == 926.0
     static let isiPad                   = idiom == .pad && ScreenSize.maxLength >= 1024.0
 
     static func isiPhoneXAspectRatio() -> Bool {
-        return isiPhoneX || isiPhoneXsMaxAndXr
+        return isiPhoneX || isiPhoneXsMaxAndXr || isiPhone12Mini || isiPhone12And12Pro || isiPhone12ProMax || isiPhone13Mini || isiPhone13And13Pro || isiPhone13ProMax || isiPhone14 || isiPhone14Plus || isiPhone14Pro || isiPhone14ProMax
     }
 }
