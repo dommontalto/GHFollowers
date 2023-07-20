@@ -88,7 +88,7 @@ class FollowerListVC: GFDataLoadingVC {
                 }
                 self.updateData(on: followers)
             case .failure(let error):
-                self.presentGFAlertOnMainThread(alertTitle: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "Ok")
             }
             
             self.isLoadingMoreFollowers = false
@@ -135,14 +135,14 @@ class FollowerListVC: GFDataLoadingVC {
                 PersistenceManager.updateWith(favourite: favourite, actionType: .add) { [weak self] error in
                     guard let self else { return }
                     guard let error else {
-                        self.presentGFAlertOnMainThread(alertTitle: "Success", message: "You have successfully favourited this user 🎉.", buttonTitle: "Hooray!")
+                        self.presentGFAlertOnMainThread(title: "Success", message: "You have successfully favourited this user 🎉.", buttonTitle: "Hooray!")
                         return
                     }
                     
-                    self.presentGFAlertOnMainThread(alertTitle: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                    self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
                 }
             case .failure(let error):
-                self.presentGFAlertOnMainThread(alertTitle: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
