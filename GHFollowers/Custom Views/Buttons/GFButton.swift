@@ -20,8 +20,7 @@ class GFButton: UIButton {
     
     convenience init(backgroundColour: UIColor, title: String) {
         self.init(frame: .zero)
-        self.backgroundColor = backgroundColour
-        self.setTitle(title, for: .normal)
+        set(backgroundColor: backgroundColour, title: title)
     }
     
     private func configure() {

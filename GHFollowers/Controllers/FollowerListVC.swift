@@ -73,20 +73,52 @@ class FollowerListVC: GFDataLoadingVC {
     func getFollowers(username: String, page: Int) {
         showLoadingView()
         isLoadingMoreFollowers = true
-        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
-            guard let self else { return }
-            self.dismissLoadingView()
-            
-            switch result {
-            case .success(let followers):
-                self.updateUI(with: followers)
-                
-            case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "Ok")
+        
+        // Old way
+        
+//        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
+//            guard let self else { return }
+//            self.dismissLoadingView()
+//
+//            switch result {
+//            case .success(let followers):
+//                self.updateUI(with: followers)
+//
+//            case .failure(let error):
+//                self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "Ok")
+//            }
+//
+//            self.isLoadingMoreFollowers = false
+//        }
+        
+        // New way
+        
+        Task {
+            do {
+                let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
+                updateUI(with: followers)
+                dismissLoadingView()
+            } catch {
+                if let gfError = error as? GFError {
+                    presentGFAlert(title: "Bad Stuff Happened", message: gfError.rawValue, buttonTitle: "Ok")
+                } else {
+                    presentDefaultError()
+                }
+                dismissLoadingView()
             }
-            
-            self.isLoadingMoreFollowers = false
         }
+        
+        // If only default errors
+        
+//        Task {
+//            guard let followers = try? await NetworkManager.shared.getFollowers(for: username, page: page) else {
+//                presentDefaultError()
+//                return
+//            }
+//
+//            updateUI(with: followers)
+//            dismissLoadingView()
+//        }
     }
     
     func updateUI(with followers: [Follower]) {
